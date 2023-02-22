@@ -1,10 +1,10 @@
-const icons = document.querySelectorAll('.container .icons i')
+const icons = document.querySelectorAll('.main .icons i')
 let i = 1;
 const activeClass = 'active'
 
 setInterval(() => {
     i++;
-    const activeIcon = document.querySelector(`.container .icons i.${activeClass}`)
+    const activeIcon = document.querySelector(`.main .icons i.${activeClass}`)
     activeIcon.classList.remove(activeClass)
     if (i > icons.length) {
         icons[0].classList.add(activeClass)
