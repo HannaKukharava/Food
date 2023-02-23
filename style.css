@@ -53,6 +53,16 @@ section.gallery {
     padding: 5rem 0;
 }
 
+section.footer {
+    flex-direction: row;
+    height: 30vh;
+    background-color: #222;
+    justify-content: space-around;
+    padding: 3rem 0;
+    position: relative;
+    align-items: flex-start;
+}
+
 /* End of Container*/
 
 /* Icons */
@@ -180,7 +190,7 @@ section.gallery {
     transition: height .3s;
 }
 
-.gallery-link:hover::before{
+.gallery-link:hover::before {
     height: 80%;
 }
 
@@ -195,7 +205,7 @@ section.gallery {
     transition: width .3s;
 }
 
-.gallery-link:hover::after{
+.gallery-link:hover::after {
     width: 90%;
 }
 
@@ -209,7 +219,7 @@ section.gallery {
     .9rem .9rem .9rem #e92999;
 }
 
-.gallery-link:hover .food-image{
+.gallery-link:hover .food-image {
     box-shadow: 1rem 1rem .1rem #e92929,
     2rem 2rem .1rem #a7e946,
     3rem 3rem .1rem #297ce9,
@@ -234,7 +244,7 @@ section.gallery {
     transition: width .3s;
 }
 
-.gallery-link:hover .food-name{
+.gallery-link:hover .food-name {
     width: 100%;
     transition: width 1.5s .5s;
 }
@@ -255,9 +265,72 @@ section.gallery {
 }
 
 
-.gallery-link:hover .food-description{
+.gallery-link:hover .food-description {
     opacity: 1;
     visibility: visible;
     transition: opacity 1s 1s;
 }
+
 /*End of Gallery*/
+
+/*Footer*/
+.copyright {
+    position: absolute;
+    bottom: 3rem;
+    font-size: 1.7rem;
+    font-weight: 200;
+    color: #eee;
+    letter-spacing: 0.1rem;
+    border-top: .1rem solid #888;
+    padding-top: 6rem;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-text {
+    text-transform: uppercase;
+}
+
+.footer-heading {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #a79a2d;
+}
+
+.footer-paragraph {
+    font-size: 1.5rem;
+    color: #888;
+}
+
+.signup-form {
+    display: flex;
+    align-items: center;
+}
+
+.signup-form-input {
+    width: 35rem;
+    height: 5rem;
+    padding: 1rem;
+    border: .2rem solid #a79a2d;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    color: #a79a2d;
+}
+
+.signup-form-input::placeholder {
+    color: #a79a2d;
+}
+
+.signup-form-btn {
+    position: relative;
+    left: -4.5rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: #333;
+    color: #a79a2d;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+/*End of Footer*/
