@@ -18,7 +18,6 @@ html {
 section {
     display: flex;
     flex-direction: column;
-    height: 100vh;
     width: 100%;
 }
 
@@ -65,27 +64,27 @@ section {
     transition: color .3s, opacity .2s;
 }
 
-.change .navbar-link{
+.change .navbar-link {
     opacity: 1;
 }
 
-.change .navbar-link:nth-child(1){
+.change .navbar-link:nth-child(1) {
     transition: opacity .4s .5s, color .3s;
 }
 
-.change .navbar-link:nth-child(2){
-    transition: opacity .4s .6s,color .3s;
+.change .navbar-link:nth-child(2) {
+    transition: opacity .4s .6s, color .3s;
 }
 
-.change .navbar-link:nth-child(3){
+.change .navbar-link:nth-child(3) {
     transition: opacity .4s .7s, color .3s;
 }
 
-.change .navbar-link:nth-child(4){
+.change .navbar-link:nth-child(4) {
     transition: opacity .4s .8s, color .3s;
 }
 
-.change .navbar-link:nth-child(5){
+.change .navbar-link:nth-child(5) {
     transition: opacity .4s .9s, color .3s;
 }
 
@@ -116,6 +115,7 @@ section {
     -.1rem -.1rem -.1rem #000;
     cursor: pointer;
     transition: top .4s .2s;
+    z-index: 100;
 }
 
 .menu.change {
@@ -123,7 +123,7 @@ section {
     transition: top .4s;
 }
 
-.menu::before{
+.menu::before {
     content: "";
     width: .3rem;
     height: 15rem;
@@ -133,17 +133,20 @@ section {
     left: calc(50% - .15rem);
     box-shadow: .1rem 0 .1rem #000;
 }
+
 /*End of Navbar*/
 
 /* Sections */
 
 section.main {
+    height: 100vh;
     justify-content: space-evenly;
     align-items: center;
     background-color: #333;
 }
 
 section.popular {
+    height: 100vh;
     background-color: #222;
     justify-content: space-between;
     padding: 10rem 0;
@@ -434,4 +437,108 @@ section.footer {
     font-size: 1.8rem;
     cursor: pointer;
 }
+
 /*End of Footer*/
+
+
+/*Responsive*/
+@media (max-width: 1400px) {
+    html {
+        font-size: 50%;
+    }
+
+    section.popular {
+        height: auto;
+        padding: 10rem 0 12rem 0;
+    }
+
+    .cards-container {
+        margin-top: 10rem;
+    }
+
+    .gallery-link {
+        width: 40rem;
+        height: 25rem;
+        margin: 5rem;
+    }
+
+    .food-image {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .section-heading {
+        font-size: 9rem;
+        margin: 0 5rem;
+    }
+
+    .icons i {
+        font-size: 25rem;
+    }
+
+    .cards-container {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        margin: 5rem;
+    }
+
+    section.footer {
+        height: 30rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar-link {
+        margin: 2rem;
+    }
+
+    .navbar-link i {
+        font-size: 4rem;
+    }
+
+    .navbar-link span {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .section-heading {
+        font-size: 7rem;
+        margin: 0 10rem;
+    }
+
+    section.main i {
+        font-size: 20rem;
+    }
+
+    .menu {
+        left: 2rem;
+    }
+
+    section.footer {
+        height: 40rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .footer-text {
+        margin-bottom: 8rem;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 40%;
+    }
+
+    .navbar-link {
+        margin: 0 .7rem;
+    }
+}
+
+/*End of Responsive*/
